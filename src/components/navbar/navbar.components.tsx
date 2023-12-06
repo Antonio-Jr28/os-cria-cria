@@ -1,3 +1,9 @@
+import { NavbarDesktop } from "./navbar-desktop.component";
+
 export const Navbar = () => {
-  return <></>;
+  return (
+    <>
+      <NavbarDesktop />
+    </>
+  );
 };
