@@ -12,24 +12,28 @@ const redesSociais = [
 
 export const NavbarDesktop = () => {
   return (
-    <section>
-      <img src={menuDesktop} alt="Menu Desktop" />
-      <img src={logoDesktop} alt="Logo Desktop" />
-
+    <nav>
       <div>
-        <ul>
-          {redesSociais.map((item, index) => (
-            <a
-              key={index}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src={item.img} alt={`Rede Social ${index + 1}`} />
-            </a>
-          ))}
-        </ul>
+        <div>
+          <img src={menuDesktop} alt="Menu Desktop" />
+          <img src={logoDesktop} alt="Logo Desktop" />
+
+          <div>
+            <ul>
+              {redesSociais.map((item, index) => (
+                <a
+                  key={index}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={item.img} alt={`Rede Social ${index + 1}`} />
+                </a>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
-    </section>
+    </nav>
   );
 };
