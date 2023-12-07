@@ -1,10 +1,14 @@
 /** @type {import('tailwindcss').Config} */
-export const content = ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"];
-export const theme = {
-  extend: {
-    fontFamily: {
-      roboto: ["Roboto", "sans-serif"],
+const config = {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
+      },
     },
   },
+  plugins: [],
 };
-export const plugins = [];
+
+export default config;

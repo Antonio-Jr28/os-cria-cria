@@ -1,39 +1,101 @@
-import logoDesktop from "../../assets/icon/logo-desktop.svg";
-import menuDesktop from "../../assets/icon/menu-desktop.svg";
-import insta from "../../assets/icon/insta.svg";
-import face from "../../assets/icon/facebook.svg";
-import whats from "../../assets/icon/whats.svg";
+import { useEffect, useRef, useState } from "react";
+import logoDesktop from "../../assets/icon/logo.svg";
+import { MenuIcon } from "../../assets/icon/menu-mobile";
 
-const redesSociais = [
-  { link: "", img: insta },
-  { link: "", img: face },
-  { link: "", img: whats },
-];
+interface MenuItem {
+  label: string;
+  link: string;
+}
 
-export const NavbarDesktop = () => {
+interface Data {
+  menuItems: MenuItem[];
+}
+
+interface NavbarDesktopProps {
+  redesItems: { link: string; img: string }[];
+  data: Data; // Renomeei de Data para data
+}
+
+export const NavbarDesktop: React.FC<NavbarDesktopProps> = ({
+  redesItems,
+  data,
+}) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement | null>(null);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+  
+  useEffect(() => {
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains?.(e.target as Node)) {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener("click", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, []);
+
   return (
-    <nav>
-      <div>
-        <div>
-          <img src={menuDesktop} alt="Menu Desktop" />
-          <img src={logoDesktop} alt="Logo Desktop" />
-
-          <div>
-            <ul>
-              {redesSociais.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={item.img} alt={`Rede Social ${index + 1}`} />
-                </a>
-              ))}
-            </ul>
-          </div>
-        </div>
+    <div className="hidden md:flex items-center justify-around bg-black h-[180px] shadow-white shadow-lg">
+      {/* Botão do menu hamburguer */}
+      <div className="cursor-pointer" onClick={toggleMenu}>
+        <MenuIcon onClick={toggleMenu} />
       </div>
-    </nav>
+
+      {/* Logo */}
+      <img
+        className="w-[140px] h-[140px] shadow-md"
+        src={logoDesktop}
+        alt="Logo Desktop"
+      />
+
+      {/* Redes Sociais */}
+      <div className="flex gap-4">
+        {redesItems.map((item, index) => (
+          <a
+            key={index}
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="icon-container"
+          >
+            <img
+              src={item.img}
+              alt={`Rede Social ${index + 1}`}
+              className="social-icon"
+            />
+          </a>
+        ))}
+      </div>
+
+      {/* Menu Hamburguer (renderizado condicionalmente) */}
+      {isMenuOpen && (
+        <div className="absolute top-32 left-36 right-[300] bg-black z-10 border rounded-md shadow-md">
+          <ul className="flex flex-col items-center gap-4 p-4">
+            {data?.menuItems?.map((item, index) => (
+              <li key={index}>
+                <a
+                  className="text-yellow-400 hover:text-white"
+                  href={item.link}
+                  onClick={toggleMenu}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
   );
 };

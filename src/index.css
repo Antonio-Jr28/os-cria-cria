@@ -1,3 +1,16 @@
+/* src/index.css */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+
+.icon-container:hover .social-icon {
+  transform: translateY(-5px); 
+  transition: transform 0.3s ease; /* Tempo e função de transição podem ser ajustados conforme necessário */
+}
+
+
+.cursor-pointer:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
