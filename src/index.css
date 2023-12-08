@@ -5,10 +5,24 @@
 
 
 .icon-container:hover .social-icon {
-  transform: translateY(-5px); 
-  transition: transform 0.3s ease; /* Tempo e função de transição podem ser ajustados conforme necessário */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  transition: all .3s; /* Tempo e função de transição podem ser ajustados conforme necessário */
 }
 
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 30%;
+  transition: all .3s;
+  box-shadow: 5px 0 10px 
+  rgba(193, 27, 27, 0.642);
+}
 
 .cursor-pointer:hover {
   transform: translateY(-5px);

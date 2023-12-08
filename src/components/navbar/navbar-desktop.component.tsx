@@ -60,7 +60,7 @@ export const NavbarDesktop: React.FC<NavbarDesktopProps> = ({
       />
 
       {/* Redes Sociais */}
-      <div className="flex gap-4">
+      <div className="flex">
         {redesItems.map((item, index) => (
           <a
             key={index}
@@ -80,8 +80,8 @@ export const NavbarDesktop: React.FC<NavbarDesktopProps> = ({
 
       {/* Menu Hamburguer (renderizado condicionalmente) */}
       {isMenuOpen && (
-        <div className="absolute top-32 left-36 right-[300] bg-black z-10 border rounded-md shadow-md">
-          <ul className="flex flex-col items-center gap-4 p-4">
+        <div className="absolute top-18 left-60 right-[300] bg-black z-10 border rounded-md shadow-md">
+          <ul className="flex flex-row items-center gap-4 p-4">
             {data?.menuItems?.map((item, index) => (
               <li key={index}>
                 <a
