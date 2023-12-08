@@ -37,7 +37,7 @@ export const NavbarMobile: React.FC<NavbarMobileProps> = ({ menuItems }) => {
 
   return (
     <div
-      className="flex flex-row items-center justify-around md:hidden cursor-pointer h-[150px]"
+      className="flex flex-row items-center justify-around md:hidden h-[150px]"
       ref={menuRef}
     >
       <img className="w-[120px] h-[120px]" src={logo} alt="Imagem da marca" />
