@@ -13,7 +13,7 @@ interface Data {
 
 interface NavbarDesktopProps {
   redesItems: { link: string; img: string }[];
-  data: Data; // Renomeei de Data para data
+  data: Data;
 }
 
 export const NavbarDesktop: React.FC<NavbarDesktopProps> = ({
@@ -30,7 +30,7 @@ export const NavbarDesktop: React.FC<NavbarDesktopProps> = ({
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
-  
+
   useEffect(() => {
     const handleOutsideClick = (e: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains?.(e.target as Node)) {
@@ -46,20 +46,17 @@ export const NavbarDesktop: React.FC<NavbarDesktopProps> = ({
   }, []);
 
   return (
-    <div className="hidden md:flex items-center justify-around bg-black h-[180px] shadow-white shadow-lg">
-      {/* Botão do menu hamburguer */}
+    <div className="hidden md:sticky md:flex items-center justify-around bg-black h-[180px] shadow-white shadow-lg">
       <div className="cursor-pointer" onClick={toggleMenu}>
         <MenuIcon onClick={toggleMenu} />
       </div>
 
-      {/* Logo */}
       <img
         className="w-[140px] h-[140px] shadow-md"
         src={logoDesktop}
         alt="Logo Desktop"
       />
 
-      {/* Redes Sociais */}
       <div className="flex">
         {redesItems.map((item, index) => (
           <a
@@ -78,7 +75,6 @@ export const NavbarDesktop: React.FC<NavbarDesktopProps> = ({
         ))}
       </div>
 
-      {/* Menu Hamburguer (renderizado condicionalmente) */}
       {isMenuOpen && (
         <div className="absolute top-18 left-60 right-[300] bg-black z-10 border rounded-md shadow-md">
           <ul className="flex flex-row items-center gap-4 p-4">

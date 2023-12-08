@@ -11,7 +11,7 @@ interface MenuItem {
 
 interface NavbarDesktopProps {
   redesItems: { link: string; img: string }[];
-  data: MenuItem[]; // Agora data é uma array de MenuItem
+  data: MenuItem[];
 }
 
 export const Navbar: React.FC<NavbarDesktopProps> = () => {
@@ -29,8 +29,8 @@ export const Navbar: React.FC<NavbarDesktopProps> = () => {
   ];
 
   return (
-    <div>
-      <NavbarDesktop redesItems={redesSociais} data={{menuItems}} />
+    <div className="top-0">
+      <NavbarDesktop redesItems={redesSociais} data={{ menuItems }} />
       <NavbarMobile menuItems={menuItems} />
     </div>
   );
