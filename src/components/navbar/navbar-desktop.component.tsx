@@ -46,13 +46,13 @@ export const NavbarDesktop: React.FC<NavbarDesktopProps> = ({
   }, []);
 
   return (
-    <div className="hidden md:sticky md:flex items-center justify-around bg-black h-[180px] shadow-white shadow-lg">
+    <div className="hidden md:sticky md:flex items-center justify-around bg-black h-[180px] shadow-white shadow-md">
       <div className="cursor-pointer" onClick={toggleMenu}>
         <MenuIcon onClick={toggleMenu} />
       </div>
 
       <img
-        className="w-[140px] h-[140px] shadow-md"
+        className="w-[140px] h-[140px]"
         src={logoDesktop}
         alt="Logo Desktop"
       />
@@ -76,7 +76,7 @@ export const NavbarDesktop: React.FC<NavbarDesktopProps> = ({
       </div>
 
       {isMenuOpen && (
-        <div className="absolute top-18 left-60 right-[300] bg-black z-10 border rounded-md shadow-md">
+        <div className="absolute top-18 left-60 right-[300] bg-black z-10 border rounded-md">
           <ul className="flex flex-row items-center gap-4 p-4">
             {data?.menuItems?.map((item, index) => (
               <li key={index}>

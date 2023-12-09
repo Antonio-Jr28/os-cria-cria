@@ -29,7 +29,7 @@ export const Navbar: React.FC<NavbarDesktopProps> = () => {
   ];
 
   return (
-    <div className="top-0">
+    <div>
       <NavbarDesktop redesItems={redesSociais} data={{ menuItems }} />
       <NavbarMobile menuItems={menuItems} />
     </div>
