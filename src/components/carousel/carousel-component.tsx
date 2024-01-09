@@ -7,9 +7,12 @@ interface CarouselProps {
 export const Carousel: React.FC<CarouselProps> = ({images}) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-    const prevImage = () => {
-        setCurrentImageIndex((currentImageIndex -1 + images.length) % images.length);
-    };
+
+    //Caso queira adicionar um botão
+    
+    // const prevImage = () => {
+    //     setCurrentImageIndex((currentImageIndex -1 + images.length) % images.length);
+    // };
 
     const nextImage = () => {
         setCurrentImageIndex((currentImageIndex + 1) % images.length);
