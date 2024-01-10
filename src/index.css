@@ -3,7 +3,13 @@
 @import 'tailwindcss/utilities';
 
 .background-image {
-  background-image: url('./assets/backgrounds/background-servicos.svg');
+  background-image: url('./assets/backgrounds/banner-principal.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.background-image-skill {
+  background-image: url('./assets/backgrounds/skill.svg');
   background-size: cover;
   background-position: center;
 }
