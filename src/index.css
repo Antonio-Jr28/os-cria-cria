@@ -7,6 +7,11 @@
   background-size: cover;
   background-position: center;
 }
+.background-image-form {
+  background-image: url('./assets/backgrounds/background.svg');
+  background-size: cover;
+  background-position: center;
+}
 
 .icon-container:hover .social-icon {
   width: 40px;

@@ -6,6 +6,7 @@ import BackgroundTwo from '../src/assets/banners/banner-2.png'
 import BackgoundTree from '../src/assets/banners/banner-3.png'
 import { ServicesSection } from './components/services/section-services.component'
 import { Divider } from './components/ divider/divider.component'
+import { ContactUs } from './components/contact-us/contact-us-form.component'
 
 export const App = () => {
   const images = [Background, BackgroundTwo, BackgoundTree]
@@ -32,9 +33,9 @@ export const App = () => {
         <ServicesSection services={services} />
       </section>
 
-      <div>
-        <Divider />
-      </div>
+      <section className="background-image-form h-[800px]">
+        <ContactUs />
+      </section>
     </>
   )
 }
