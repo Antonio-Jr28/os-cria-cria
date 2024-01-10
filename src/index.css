@@ -42,3 +42,14 @@
 .text-don {
   font-family: 'Don', sans-serif;
 }
+
+@font-face {
+  font-family: 'Bombing';
+  src: url('./assets/fonts/bombing-webfont.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-bombing {
+  font-family: 'Bombing', sans-serif;
+}
