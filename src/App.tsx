@@ -5,7 +5,6 @@ import Background from '../src/assets/banners/banner-1.png'
 import BackgroundTwo from '../src/assets/banners/banner-2.png'
 import BackgoundTree from '../src/assets/banners/banner-3.png'
 import { ServicesSection } from './components/services/section-services.component'
-import { Divider } from './components/ divider/divider.component'
 import { ContactUs } from './components/contact-us/contact-us-form.component'
 
 export const App = () => {
