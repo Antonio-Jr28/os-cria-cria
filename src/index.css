@@ -8,12 +8,6 @@
   background-position: center;
 }
 
-.background-image-skill {
-  background-image: url('./assets/backgrounds/skill.svg');
-  background-size: cover;
-  background-position: center;
-}
-
 .icon-container:hover .social-icon {
   width: 40px;
   height: 40px;
