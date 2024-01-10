@@ -2,6 +2,11 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+.background-image {
+  background-image: url('./assets/backgrounds/background-servicos.svg');
+  background-size: cover;
+  background-position: center;
+}
 
 .icon-container:hover .social-icon {
   width: 40px;
@@ -9,7 +14,7 @@
   display: flex;
   cursor: pointer;
   position: relative;
-  transition: all .3s; /* Tempo e função de transição podem ser ajustados conforme necessário */
+  transition: all 0.3s; /* Tempo e função de transição podem ser ajustados conforme necessário */
 }
 
 .bg {
@@ -18,12 +23,22 @@
   height: 100%;
   z-index: 1;
   border-radius: 30%;
-  transition: all .3s;
-  box-shadow: 5px 0 10px 
-  rgba(193, 27, 27, 0.642);
+  transition: all 0.3s;
+  box-shadow: 5px 0 10px rgba(193, 27, 27, 0.642);
 }
 
 .cursor-pointer:hover {
   transform: translateY(-5px);
   transition: transform 0.3s ease;
+}
+
+@font-face {
+  font-family: 'Don';
+  src: url('./assets/fonts/dongraffiti-webfont.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-don {
+  font-family: 'Don', sans-serif;
 }

@@ -1,4 +1,3 @@
-
 interface MenuIconProps {
   onClick: () => void;
 }
