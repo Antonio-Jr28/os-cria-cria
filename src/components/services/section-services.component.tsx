@@ -19,6 +19,27 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
       <h1 className="flex justify-end pr-20 text-bombing text-8xl text-white">
         Quem Somos?
       </h1>
+
+      <h2 className="w-[900px] text-white pl-[220px] pt-[170px] font-semibold text-lg">
+        Lorem ipsum dolor sit amet. In alias soluta sit earum nihil aut neque
+        reprehenderit. Et animi libero eos ipsa quia eum dolor praesentium ad
+        ipsum nostrum est unde repellat. Ea optio vitae eum architecto
+        laudantium id provident eius. Ut commodi Quis in dicta tempora sed
+        placeat sunt qui itaque reiciendis est quisquam doloremque. Et voluptas
+        assumenda vel repudiandae autem 33 quia veritatis. Qui numquam eveniet
+        qui expedita dolor id consequatur velit et consequatur velit qui esse
+        doloribus sed dolor molestiae aut autem tempore. Eos facilis
+        voluptatibus vel quasi totam sit provident beatae vel quasi totam et
+        tempora autem qui eligendi voluptatum qui consectetur mollitia. Est
+        doloribus sed dolor molestiae aut autem tempore. Eos facilis
+        voluptatibus vel quasi totam sit provident beatae vel quasi totam et
+        tempora autem qui eligendi voluptatum qui consectetur mollitia. Est
+        excepturi voluptas in natus blanditiis vel culpa nobis. Quo fuga
+        voluptatibus vel quasi totam sit provident beatae vel quasi totam et
+        tempora autem qui eligendi voluptatum qui consectetur mollitia. Est
+        excepturi voluptas in natus blanditiis vel culpa nobis. Quo fuga
+        incidunt ex vitae culpa At vero tempora.
+      </h2>
     </div>
   )
 }
