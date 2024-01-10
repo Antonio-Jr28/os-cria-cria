@@ -3,10 +3,11 @@ import { Navbar } from './components/navbar/navbar.components'
 
 import Background from '../src/assets/banners/banner-1.png'
 import BackgroundTwo from '../src/assets/banners/banner-2.png'
+import BackgoundTree from '../src/assets/banners/banner-3.png'
 import { ServicesSection } from './components/services/section-services.component'
 
 export const App = () => {
-  const images = [Background, BackgroundTwo]
+  const images = [Background, BackgroundTwo, BackgoundTree]
 
   return (
     <>
