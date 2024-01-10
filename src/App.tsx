@@ -29,7 +29,7 @@ export const App = () => {
       <section>
         <Carousel images={images} />
       </section>
-      <section className="background-image h-[1600px]">
+      <section className="background-image h-[1700px]">
         <ServicesSection services={services} />
       </section>
 
