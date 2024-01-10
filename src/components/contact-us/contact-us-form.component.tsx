@@ -18,10 +18,18 @@ export const ContactUs: React.FC = () => {
   ) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
+  const clearForm = () => {
+    setForm({
+      name: '',
+      email: '',
+      message: '',
+    })
+  }
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     console.log(form)
+    clearForm()
   }
 
   return (
@@ -34,6 +42,7 @@ export const ContactUs: React.FC = () => {
               Name:
             </label>
             <input
+              value={form.name}
               type="text"
               id="name"
               name="name"
@@ -44,6 +53,7 @@ export const ContactUs: React.FC = () => {
               Email:
             </label>
             <input
+              value={form.email}
               type="email"
               id="email"
               name="email"
