@@ -3,18 +3,18 @@ import React from 'react'
 import Logo from '../../assets/icon/logo-mobile.svg'
 
 interface FooterProps {
-  services: string[]
+  services: { name: string; description: string }[]
   medias: string[]
 }
 
 export const Footer: React.FC<FooterProps> = ({ services, medias }) => {
   return (
-    <div className=" flex flex-row justify-around bg-yellow-600 h-[320px] w-[1000px] rounded-t-[50px]">
+    <div className="flex flex-row justify-around bg-yellow-600 h-[320px] w-[1000px] rounded-t-[50px]">
       <div>
         <h2 className="text-bombing text-4xl text-center mt-8">Os Cria Cria</h2>
         <p className="w-[300px] mt-1">
           Empresa criada para o desenvolvimento e crescimento de pequenas
-          empresas para grandes negocios.
+          empresas para grandes negócios.
         </p>
         <p className="text-black text-lg mt-8">
           <i className="fas fa-phone mr-4 text-black"></i>
@@ -33,19 +33,21 @@ export const Footer: React.FC<FooterProps> = ({ services, medias }) => {
       <div>
         <h2 className="text-bombing text-4xl mt-8">Serviços</h2>
 
-        <ol className="mt-8">
-          {services.map((service) => (
-            <li className="text-black">{service}</li>
+        <ul className="mt-8">
+          {services?.map((service, index) => (
+            <li key={index} className="text-black">
+              {service.name}
+            </li>
           ))}
-        </ol>
+        </ul>
       </div>
 
       <div>
         <h2 className="text-bombing text-4xl mt-8">Redes Sociais</h2>
 
         <ul className="mt-8">
-          {medias.map((redes) => (
-            <li>{redes}</li>
+          {medias.map((rede, index) => (
+            <li key={index}>{rede}</li>
           ))}
         </ul>
         <img src={Logo} alt="logo" />

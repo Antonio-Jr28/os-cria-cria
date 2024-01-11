@@ -2,10 +2,24 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evitar barra de rolagem horizontal */
+}
+
 .background-image {
-  background-image: url('./assets/backgrounds/teste.svg');
+  background-image: url('./assets/backgrounds/background-service-mobile.svg');
   background-size: cover;
   background-position: center;
+}
+@media only screen and (min-width: 768px) {
+  .background-image-desktop {
+    background-image: url('./assets/backgrounds/background-service.svg');
+    background-size: cover;
+    background-position: center;
+  }
 }
 .background-image-form {
   background-image: url('./assets/backgrounds/background.svg');

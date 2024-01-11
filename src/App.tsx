@@ -11,14 +11,36 @@ import { Footer } from './components/footer/footer.component'
 export const App = () => {
   const images = [Background, BackgroundTwo, BackgoundTree]
   const services = [
-    'Sites',
-    'Banner',
-    'Cards',
-    'Cartão de visita',
-    'Biografia',
-    'Release',
-    'Copywriting',
-    'Diagramação',
+    {
+      name: 'Sites',
+      description:
+        'Transforme sua presença online com designs irresistíveis! 🚀 Seja para um site profissional, blog envolvente ou plataforma interativa, eu estou aqui para realizar suas ideias! 💻✨',
+    },
+    {
+      name: 'Banner',
+      description:
+        'Transforme sua presença online com designs irresistíveis! 🚀 Seja para um site profissional, blog envolvente ou plataforma interativa, eu estou aqui para realizar suas ideias! 💻✨',
+    },
+    {
+      name: 'Cards',
+      description:
+        'Transforme sua presença online com designs irresistíveis! 🚀 Seja para um site profissional, blog envolvente ou plataforma interativa, eu estou aqui para realizar suas ideias! 💻✨',
+    },
+    {
+      name: 'Biografia',
+      description:
+        'Transforme sua presença online com designs irresistíveis! 🚀 Seja para um site profissional, blog envolvente ou plataforma interativa, eu estou aqui para realizar suas ideias! 💻✨',
+    },
+    {
+      name: 'Release',
+      description:
+        'Transforme sua presença online com designs irresistíveis! 🚀 Seja para um site profissional, blog envolvente ou plataforma interativa, eu estou aqui para realizar suas ideias! 💻✨',
+    },
+    {
+      name: 'Copywriting',
+      description:
+        'Transforme sua presença online com designs irresistíveis! 🚀 Seja para um site profissional, blog envolvente ou plataforma interativa, eu estou aqui para realizar suas ideias! 💻✨',
+    },
   ]
   const socialMedia = ['Instagram', 'Facebook', 'Github']
 
@@ -30,7 +52,7 @@ export const App = () => {
       <section>
         <Carousel images={images} />
       </section>
-      <section className="background-image h-[1700px]">
+      <section className="background-image background-image-desktop h-[700px]">
         <ServicesSection services={services} />
       </section>
 
