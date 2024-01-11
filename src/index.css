@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 .background-image {
-  background-image: url('./assets/backgrounds/banner-principal.svg');
+  background-image: url('./assets/backgrounds/teste.svg');
   background-size: cover;
   background-position: center;
 }

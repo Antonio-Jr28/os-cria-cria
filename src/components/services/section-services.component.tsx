@@ -16,11 +16,11 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
         ))}
       </ol>
       <Divider />
-      <h1 className="flex justify-end pr-20 text-bombing text-8xl text-white">
+      <h1 className="flex justify-end pr-20 text-bombing text-8xl text-black pt-1">
         Quem Somos?
       </h1>
 
-      <h2 className="w-[900px] text-white pl-[220px] pt-[170px] font-semibold text-lg">
+      <h2 className="w-[900px] text-white pl-[220px] pt-[200px] font-semibold text-lg">
         Lorem ipsum dolor sit amet. In alias soluta sit earum nihil aut neque
         reprehenderit. Et animi libero eos ipsa quia eum dolor praesentium ad
         ipsum nostrum est unde repellat. Ea optio vitae eum architecto

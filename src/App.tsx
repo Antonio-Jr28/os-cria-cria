@@ -6,6 +6,7 @@ import BackgroundTwo from '../src/assets/banners/banner-2.png'
 import BackgoundTree from '../src/assets/banners/banner-3.png'
 import { ServicesSection } from './components/services/section-services.component'
 import { ContactUs } from './components/contact-us/contact-us-form.component'
+import { Footer } from './components/footer/footer.component'
 
 export const App = () => {
   const images = [Background, BackgroundTwo, BackgoundTree]
@@ -19,6 +20,7 @@ export const App = () => {
     'Copywriting',
     'Diagramação',
   ]
+  const socialMedia = ['Instagram', 'Facebook', 'Github']
 
   return (
     <>
@@ -34,6 +36,10 @@ export const App = () => {
 
       <section className="background-image-form h-[800px]">
         <ContactUs />
+      </section>
+
+      <section className="flex justify-center items-end background-image-form h-[360px]">
+        <Footer medias={socialMedia} services={services} />
       </section>
     </>
   )
