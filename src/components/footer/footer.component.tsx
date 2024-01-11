@@ -9,10 +9,10 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ services, medias }) => {
   return (
-    <div className="flex flex-row justify-around bg-yellow-600 h-[320px] w-[1000px] rounded-t-[50px]">
+    <div className="flex flex-col md:flex-row md:justify-around text-center bg-yellow-600 h-[870px] md:h-[320px] w-[1000px] rounded-t-[50px]">
       <div>
         <h2 className="text-bombing text-4xl text-center mt-8">Os Cria Cria</h2>
-        <p className="w-[300px] mt-1">
+        <p className="w-auto md:w-[350px] mt-1">
           Empresa criada para o desenvolvimento e crescimento de pequenas
           empresas para grandes negócios.
         </p>
@@ -50,7 +50,7 @@ export const Footer: React.FC<FooterProps> = ({ services, medias }) => {
             <li key={index}>{rede}</li>
           ))}
         </ul>
-        <img src={Logo} alt="logo" />
+        <img className="pl-16" src={Logo} alt="logo" />
       </div>
     </div>
   )

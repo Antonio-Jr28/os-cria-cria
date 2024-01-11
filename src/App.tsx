@@ -60,7 +60,7 @@ export const App = () => {
         <ContactUs />
       </section>
 
-      <section className="flex justify-center items-end background-image-form h-[360px]">
+      <section className="flex justify-center items-end background-image-form ">
         <Footer medias={socialMedia} services={services} />
       </section>
     </>
