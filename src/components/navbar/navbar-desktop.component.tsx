@@ -1,58 +1,58 @@
-import { useEffect, useRef, useState } from "react";
-import logoDesktop from "../../assets/icon/logo.svg";
-import { MenuIcon } from "../../assets/icon/menu-mobile";
+import { useEffect, useRef, useState } from 'react'
+import logoDesktop from '../../assets/icon/logo.svg'
+import { MenuIcon } from '../../assets/icon/menu-mobile'
 
 interface MenuItem {
-  label: string;
-  link: string;
+  label: string
+  link: string
 }
 
 interface Data {
-  menuItems: MenuItem[];
+  menuItems: MenuItem[]
 }
 
 interface NavbarDesktopProps {
-  redesItems: { link: string; img: string }[];
-  data: Data;
+  redesItems: { link: string; img: string }[]
+  data: Data
 }
 
 export const NavbarDesktop: React.FC<NavbarDesktopProps> = ({
   redesItems,
   data,
 }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const menuRef = useRef<HTMLDivElement | null>(null)
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+    setIsMenuOpen(false)
+  }
 
   useEffect(() => {
     const handleOutsideClick = (e: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains?.(e.target as Node)) {
-        closeMenu();
+        closeMenu()
       }
-    };
+    }
 
-    document.addEventListener("click", handleOutsideClick);
+    document.addEventListener('click', handleOutsideClick)
 
     return () => {
-      document.removeEventListener("click", handleOutsideClick);
-    };
-  }, []);
+      document.removeEventListener('click', handleOutsideClick)
+    }
+  }, [])
 
   return (
-    <div className="hidden md:sticky md:flex items-center justify-around bg-black h-[180px] shadow-white shadow-md">
+    <div className="hidden md:sticky md:flex items-center justify-around bg-black h-[140px] shadow-white shadow-md">
       <div className="cursor-pointer" onClick={toggleMenu}>
         <MenuIcon onClick={toggleMenu} />
       </div>
 
       <img
-        className="w-[140px] h-[140px]"
+        className="w-[100px] h-[100px]"
         src={logoDesktop}
         alt="Logo Desktop"
       />
@@ -93,5 +93,5 @@ export const NavbarDesktop: React.FC<NavbarDesktopProps> = ({
         </div>
       )}
     </div>
-  );
-};
+  )
+}

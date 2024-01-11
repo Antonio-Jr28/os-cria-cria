@@ -20,7 +20,7 @@ export const Footer: React.FC<FooterProps> = ({ services, medias }) => {
           <i className="fas fa-phone mr-4 text-black"></i>
           11 - 95427-7459
         </p>
-        <p className="text-black text-sm mt-4">
+        <p className="text-black text-lg mt-4">
           <i className="fas fa-envelope mr-4 text-black"></i>
           oscria.cria21@gmail.com
         </p>
