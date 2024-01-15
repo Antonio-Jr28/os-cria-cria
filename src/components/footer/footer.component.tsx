@@ -50,7 +50,7 @@ export const Footer: React.FC<FooterProps> = ({ services, medias }) => {
             <li key={index}>{rede}</li>
           ))}
         </ul>
-        <img className="pl-16" src={Logo} alt="logo" />
+        <img className="pl-20" src={Logo} alt="logo" />
       </div>
     </div>
   )
