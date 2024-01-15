@@ -56,7 +56,7 @@ export const App = () => {
         <ServicesSection services={services} />
       </section>
 
-      <section className="background-image-form h-[800px]">
+      <section className="background-image-form">
         <ContactUs />
       </section>
 
