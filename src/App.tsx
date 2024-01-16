@@ -1,9 +1,9 @@
 import { Carousel } from './components/carousel/carousel-component'
 import { Navbar } from './components/navbar/navbar.components'
 
-import Background from '../src/assets/banners/banner-1.png'
-import BackgroundTwo from '../src/assets/banners/banner-2.png'
-import BackgoundTree from '../src/assets/banners/banner-3.png'
+import Banner from '../src/assets/banners/banner-1.png'
+import BannerTwo from '../src/assets/banners/banner-2.png'
+import BannerTree from '../src/assets/banners/banner-3.png'
 import { ServicesSection } from './components/services/section-services.component'
 import { ContactUs } from './components/contact-us/contact-us-form.component'
 import { Footer } from './components/footer/footer.component'
@@ -11,7 +11,7 @@ import { AboutUs } from './components/about-us/abount-us-componente'
 import { Divider } from './components/ divider/divider.component'
 
 export const App = () => {
-  const images = [Background, BackgroundTwo, BackgoundTree]
+  const images = [Banner, BannerTwo, BannerTree]
   const services = [
     {
       name: 'Sites',
@@ -58,8 +58,8 @@ export const App = () => {
         <ServicesSection services={services} />
         <Divider />
       </section>
-
-      <section className="background-quem-somos">
+      <div className="gradientColors" />
+      <section className="background-about-us background-about-us-desktop">
         <AboutUs />
       </section>
 

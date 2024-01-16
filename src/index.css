@@ -24,15 +24,15 @@ html {
   }
 }
 
-.background-quem-somos {
-  background-image: url('./assets/backgrounds/background-quem-somos-mobile.png');
+.background-about-us {
+  background-image: url('./assets/backgrounds/background-about-us-mobile.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 @media only screen and (min-width: 768px) {
-  .background-quem-somos-desktop {
-    background-image: url('./assets/backgrounds/background-quem-somos\ 1.svg');
+  .background-about-us-desktop {
+    background-image: url('./assets/backgrounds/quem-somos.svg');
     background-size: cover;
     background-position: center;
   }

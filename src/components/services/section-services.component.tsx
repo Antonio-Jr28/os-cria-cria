@@ -1,5 +1,5 @@
 import React from 'react'
-import { Divider } from '../ divider/divider.component'
+
 import { CardService } from './card-service.component'
 
 interface Service {
@@ -24,7 +24,6 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
           <CardService key={index} service={service} />
         ))}
       </div>
-      <Divider />
     </div>
   )
 }
