@@ -1,22 +1,22 @@
-import { useEffect, useRef, useState } from "react";
-import logo from "../../assets/icon/logo.svg";
-import { MenuIcon } from "../../assets/icon/menu-mobile";
+import { useEffect, useRef, useState } from 'react'
+import logo from '../../assets/icon/logo.svg'
+import { MenuIcon } from '../../assets/icon/menu-mobile'
 
 interface NavbarMobileProps {
-  menuItems: { label: string; link: string }[];
+  menuItems: { label: string; link: string }[]
 }
 
 export const NavbarMobile: React.FC<NavbarMobileProps> = ({ menuItems }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const menuRef = useRef<HTMLDivElement | null>(null)
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+    setIsMenuOpen(false)
+  }
 
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
@@ -24,23 +24,23 @@ export const NavbarMobile: React.FC<NavbarMobileProps> = ({ menuItems }) => {
         menuRef.current &&
         !menuRef.current.contains?.(event.target as Node)
       ) {
-        closeMenu();
+        closeMenu()
       }
-    };
+    }
 
-    document.addEventListener("click", handleOutsideClick);
+    document.addEventListener('click', handleOutsideClick)
 
     return () => {
-      document.removeEventListener("click", handleOutsideClick);
-    };
-  }, []);
+      document.removeEventListener('click', handleOutsideClick)
+    }
+  }, [])
 
   return (
     <div
-      className="flex flex-row items-center justify-around md:hidden h-[150px]"
+      className="flex flex-row items-center justify-around md:hidden h-[80px]"
       ref={menuRef}
     >
-      <img className="w-[120px] h-[120px]" src={logo} alt="Imagem da marca" />
+      <img className="w-[60px] h-[60px]" src={logo} alt="Imagem da marca" />
       <div className="cursor-pointer" onClick={toggleMenu}>
         <MenuIcon onClick={toggleMenu} />
       </div>
@@ -63,5 +63,5 @@ export const NavbarMobile: React.FC<NavbarMobileProps> = ({ menuItems }) => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}

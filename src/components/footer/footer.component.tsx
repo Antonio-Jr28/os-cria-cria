@@ -9,9 +9,9 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ services, medias }) => {
   return (
-    <div className="flex flex-col pl-4 pr-4 md:flex-row md:justify-around text-center bg-yellow-600 h-[870px] md:h-[320px] w-[1000px] rounded-t-[50px]">
+    <div className="flex flex-col pl-4 pr-4 md:flex-row md:justify-around text-center backFooterColor h-[870px] md:h-[320px] w-[1000px] rounded-t-[50px]">
       <div>
-        <h2 className="text-bombing text-4xl text-center mt-8">Os Cria Cria</h2>
+        <h2 className="text-bombing text-5xl text-center mt-8">Os Cria Cria</h2>
         <p className="w-auto md:w-[350px] mt-1">
           Empresa criada para o desenvolvimento e crescimento de pequenas
           empresas para grandes negócios.
@@ -31,7 +31,7 @@ export const Footer: React.FC<FooterProps> = ({ services, medias }) => {
       </div>
 
       <div>
-        <h2 className="text-bombing text-4xl mt-8">Serviços</h2>
+        <h2 className=" text-4xl mt-8">Serviços</h2>
 
         <ul className="mt-8">
           {services?.map((service, index) => (
@@ -43,7 +43,7 @@ export const Footer: React.FC<FooterProps> = ({ services, medias }) => {
       </div>
 
       <div>
-        <h2 className="text-bombing text-4xl mt-8">Redes Sociais</h2>
+        <h2 className=" text-4xl mt-8">Redes Sociais</h2>
 
         <ul className="mt-8">
           {medias.map((rede, index) => (

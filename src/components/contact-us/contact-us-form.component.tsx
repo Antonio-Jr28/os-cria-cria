@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { contactUsStrings } from './contact-us-form.string'
 
 interface IForm {
   name: string
@@ -35,14 +36,14 @@ export const ContactUs: React.FC = () => {
   return (
     <section>
       <h1 className="text-bombing text-4xl text-center md:text-8xl text-white md:pl-32">
-        Fale conosco!
+        {contactUsStrings.title}
       </h1>
 
       <div className="flex flex-col items-center md:flex-row md:justify-around mt-8 pb-10">
         <form onSubmit={handleSubmit} className="flex flex-col md:pl-10">
           <p className="text-white text-lg md:text-2xl">Nós chame!</p>
           <label htmlFor="name" className="mt-4 text-white">
-            Name:
+            {contactUsStrings.form.name}
           </label>
           <input
             value={form.name}
@@ -53,7 +54,7 @@ export const ContactUs: React.FC = () => {
             className="border border-gray-300 rounded-lg w-[250px] md:w-[300px]"
           />
           <label htmlFor="email" className="mt-4 text-white">
-            Email:
+            {contactUsStrings.form.email}
           </label>
           <input
             value={form.email}
@@ -64,7 +65,7 @@ export const ContactUs: React.FC = () => {
             className="border border-gray-300 rounded-lg w-[250px] md:w-[300px]"
           />
           <label htmlFor="message" className="mt-4 text-white">
-            Message:
+            {contactUsStrings.form.message}
           </label>
           <textarea
             id="message"
@@ -78,29 +79,29 @@ export const ContactUs: React.FC = () => {
               className="bg-yellow-600 mt-3 rounded-2xl w-[80px]"
               type="submit"
             >
-              Enviar
+              {contactUsStrings.form.buttonSend}
             </button>
           </div>
         </form>
 
         <div>
           <h1 className="text-white text-center text-2xl md:text-[50px] leading-none mt-5">
-            Transformamos <br /> sonhos em
+            {contactUsStrings.contactUs.suffix}
             <h1 className="text-yellow-600 text-center text-2xl md:mt-4 md:text-[50px]">
-              REALIDADE
+              {contactUsStrings.contactUs.prefix}
             </h1>
           </h1>
           <p className="text-white text-sm md:text-2xl mt-8">
             <i className="fas fa-phone mr-4 text-yellow-400"></i>
-            11 - 95427-7459
+            {contactUsStrings.contactUs.phone}
           </p>
           <p className="text-white text-sm md:text-2xl mt-8">
             <i className="fas fa-envelope mr-4 text-yellow-400"></i>
-            oscria.cria21@gmail.com
+            {contactUsStrings.contactUs.email}
           </p>
           <p className="text-white text-sm md:text-2xl mt-8">
             <i className="fas fa-map-marker-alt mr-4 text-yellow-400"></i>
-            Rua: Montanhas, 61 apto 309 Itaquera/SP
+            {contactUsStrings.contactUs.andress}
           </p>
         </div>
       </div>
