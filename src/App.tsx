@@ -58,7 +58,7 @@ export const App = () => {
         <ServicesSection services={services} />
         <Divider />
       </section>
-      <div className="gradientColors" />
+
       <section className="background-about-us background-about-us-desktop">
         <AboutUs />
       </section>
