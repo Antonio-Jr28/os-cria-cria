@@ -7,6 +7,8 @@ import BackgoundTree from '../src/assets/banners/banner-3.png'
 import { ServicesSection } from './components/services/section-services.component'
 import { ContactUs } from './components/contact-us/contact-us-form.component'
 import { Footer } from './components/footer/footer.component'
+import { AboutUs } from './components/about-us/abount-us-componente'
+import { Divider } from './components/ divider/divider.component'
 
 export const App = () => {
   const images = [Background, BackgroundTwo, BackgoundTree]
@@ -52,15 +54,22 @@ export const App = () => {
       <section>
         <Carousel images={images} />
       </section>
-      <section className="background-image background-image-desktop h-[700px]">
+      <section className="background-image background-image-desktop">
         <ServicesSection services={services} />
+        <Divider />
+      </section>
+
+      <section className="background-quem-somos">
+        <AboutUs />
       </section>
 
       <section className="background-image-form">
         <ContactUs />
+        <Divider />
       </section>
 
       <section className="flex justify-center items-end background-image-form ">
+        <Divider />
         <Footer medias={socialMedia} services={services} />
       </section>
     </>

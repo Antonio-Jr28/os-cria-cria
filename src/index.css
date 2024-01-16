@@ -13,14 +13,31 @@ html {
   background-image: url('./assets/backgrounds/background-service-mobile.svg');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 @media only screen and (min-width: 768px) {
   .background-image-desktop {
     background-image: url('./assets/backgrounds/background-service.svg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
   }
 }
+
+.background-quem-somos {
+  background-image: url('./assets/backgrounds/background-quem-somos-mobile.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 768px) {
+  .background-quem-somos-desktop {
+    background-image: url('./assets/backgrounds/background-quem-somos\ 1.svg');
+    background-size: cover;
+    background-position: center;
+  }
+}
+
 .background-image-form {
   background-image: url('./assets/backgrounds/background.svg');
   background-size: cover;

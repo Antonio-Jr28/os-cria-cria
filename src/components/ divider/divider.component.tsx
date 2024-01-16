@@ -1,3 +1,3 @@
 export const Divider = () => {
-  return <div className="mt-40"></div>
+  return <div className="h-[200px]"></div>
 }
