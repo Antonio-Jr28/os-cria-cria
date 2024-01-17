@@ -1,5 +1,22 @@
 import React, { useState } from 'react'
+import { getFirestore, collection, addDoc } from 'firebase/firestore'
+
+import 'firebase/firestore'
 import { contactUsStrings } from './contact-us-form.string'
+import firebase from 'firebase/compat/app'
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyAnlZBZVBCGFPeEvDnP4eZkt4XVR-0LSx8',
+  authDomain: 'os-cria-cria.firebaseapp.com',
+  projectId: 'os-cria-cria',
+  storageBucket: 'os-cria-cria.appspot.com',
+  messagingSenderId: '813605485977',
+  appId: '1:813605485977:web:9eebddfc1907e45a096708',
+  measurementId: 'G-X156LTCC3G',
+}
+
+firebase.initializeApp(firebaseConfig)
+const db = getFirestore()
 
 interface IForm {
   name: string
@@ -19,6 +36,7 @@ export const ContactUs: React.FC = () => {
   ) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
+
   const clearForm = () => {
     setForm({
       name: '',
@@ -27,10 +45,16 @@ export const ContactUs: React.FC = () => {
     })
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log(form)
-    clearForm()
+
+    try {
+      await addDoc(collection(db, 'users'), form)
+      console.log('Dados enviados com sucesso!')
+      clearForm()
+    } catch (error) {
+      console.error('Erro ao enviar dados para o Firestore:', error)
+    }
   }
 
   return (
