@@ -6,9 +6,13 @@ import { contactUsStrings } from './contact-us-form.string'
 import firebase from 'firebase/compat/app'
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyAnlZBZVBCGFPeEvDnP4eZkt4XVR-0LSx8',
-  authDomain: 'os-cria-cria.firebaseapp.com',
-  projectId: 'os-cria-cria',
+  apiKey: 'AIzaSyBLbLimmcn0lfyn0tNlK-yM8mBvwaP1Ifs',
+  authDomain: 'os-cria-cria-10e5c.firebaseapp.com',
+  projectId: 'os-cria-cria-10e5c',
+  storageBucket: 'os-cria-cria-10e5c.appspot.com',
+  messagingSenderId: '427687269581',
+  appId: '1:427687269581:web:47e43eb4321425001e8584',
+  measurementId: 'G-ELB4DHD1SV',
 }
 
 firebase.initializeApp(firebaseConfig)
