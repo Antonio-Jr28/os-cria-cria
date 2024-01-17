@@ -36,7 +36,7 @@ export const ContactUs: React.FC = () => {
   return (
     <section>
       <div className="h-[100px]" />
-      <h1 className="text-bombing text-4xl text-center md:text-8xl text-white md:pl-32">
+      <h1 className="text-bombing text-6xl text-center md:text-8xl text-white md:pl-32">
         {contactUsStrings.title}
       </h1>
 

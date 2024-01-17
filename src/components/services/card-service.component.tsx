@@ -16,16 +16,16 @@ export const CardService: React.FC<CardServiceProps> = ({ service }) => {
 
   return (
     <div
-      className={`border border-yellow-600 items-center justify-center rounded-lg w-[330px] md:w-[400px] mt-3 ${
+      className={`border border-yellow-600 items-center justify-center rounded-lg w-[250px] md:w-[400px] mt-3 ${
         showDescription ? 'bg-trasnparet' : ''
       }`}
       onClick={handleCardClick}
     >
-      <h1 className="text-3xl text-center text-white p-3 md:p-5">
+      <h1 className="text-3xl text-center text-white p-2 md:p-5">
         {service?.name}
       </h1>
       {showDescription && (
-        <p className="text-lg text-center text-white p-3 md:p-5">
+        <p className="text-lg text-center text-white p-2 md:p-5">
           {service?.description}
         </p>
       )}

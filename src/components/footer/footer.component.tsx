@@ -26,7 +26,7 @@ export const Footer: React.FC<FooterProps> = ({ services, medias }) => {
         </p>
         <p className="text-black text-lg mt-4">
           <i className="fas fa-map-marker-alt mr-4 text-black"></i>
-          Rua: Montanhas, 61 apto 309 Itaquera/SP
+          Rua: Montanhas, 61 Itaquera/SP
         </p>
       </div>
 

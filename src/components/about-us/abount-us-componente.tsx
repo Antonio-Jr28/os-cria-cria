@@ -6,7 +6,7 @@ export const AboutUs = () => {
   return (
     <div className="flex flex-col md:flex-row items-center md:justify-around">
       <div className="flex flex-col items-center w-[350px] md:w-[500px]">
-        <h1 className="text-bombing text-6xl mt-5">Quem somos</h1>
+        <h1 className="text-bombing text-6xl mt-5">{aboutUsStrings.title}</h1>
         <img src={Logo} />
         <h1>{aboutUsStrings.coCeo}</h1>
         <p>{aboutUsStrings.descriptionCoCeo} </p>
