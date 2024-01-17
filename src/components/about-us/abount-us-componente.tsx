@@ -1,6 +1,7 @@
 import { Divider } from '../ divider/divider.component'
 import Logo from '../../assets/icon/logo-desktop.svg'
 import { aboutUsStrings } from './about-us.strings'
+import Isabelly from '../../assets/img/isabelly-about.svg'
 
 export const AboutUs = () => {
   return (
@@ -9,7 +10,11 @@ export const AboutUs = () => {
         <h1 className="text-bombing text-6xl md:text-8xl mt-5">
           {aboutUsStrings.title}
         </h1>
-        <img src={Logo} />
+        <img
+          className="w-[200px] h-[200px]"
+          src={Isabelly}
+          alt="Foto da coceo da empresa"
+        />
         <h1>{aboutUsStrings.coCeo}</h1>
         <p>{aboutUsStrings.descriptionCoCeo} </p>
 
