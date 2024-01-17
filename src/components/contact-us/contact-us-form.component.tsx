@@ -35,13 +35,16 @@ export const ContactUs: React.FC = () => {
 
   return (
     <section>
-      <div className="h-[100px]" />
-      <h1 className="text-bombing text-6xl text-center md:text-8xl text-white md:pl-32">
+      <div className="flex items-center h-[100px]" />
+      <h1 className="text-bombing text-center md:text-left text-6xl md:text-8xl text-white md:pl-32">
         {contactUsStrings.title}
       </h1>
 
-      <div className="flex flex-col items-center md:flex-row md:justify-around mt-8 pb-10">
-        <form onSubmit={handleSubmit} className="flex flex-col md:pl-10">
+      <div className="flex flex-col items-center md:flex-row md:justify-evenly mt-8 pb-10">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col md:pl-10 border-2 border-white rounded-2xl bg-opacity-100 p-5"
+        >
           <p className="text-white text-lg md:text-2xl">Nós chame!</p>
           <label htmlFor="name" className="mt-4 text-white">
             {contactUsStrings.form.name}
