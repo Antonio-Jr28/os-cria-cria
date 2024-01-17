@@ -8,7 +8,7 @@ export const contactUsStrings = {
   },
   contactUs: {
     suffix: 'Transformamos ',
-    prefix: 'sonhos em Realidade',
+    prefix: 'sonhos em realidade',
     phone: '11 - 95427-7459',
     email: 'oscria.cria21@gmail.com',
     andress: 'Rua: Montanhas, 61 Itaquera/SP',

@@ -1,5 +1,5 @@
 interface MenuIconProps {
-  onClick: () => void;
+  onClick: () => void
 }
 
 export const MenuIcon: React.FC<MenuIconProps> = () => {
@@ -10,7 +10,6 @@ export const MenuIcon: React.FC<MenuIconProps> = () => {
       viewBox="0 0 48 48"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      onClick={onclick}
     >
       <g filter="url(#filter0_i_3_67)">
         <path
@@ -100,5 +99,5 @@ export const MenuIcon: React.FC<MenuIconProps> = () => {
         </filter>
       </defs>
     </svg>
-  );
-};
+  )
+}

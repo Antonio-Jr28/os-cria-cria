@@ -1,6 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
 import logoDesktop from '../../assets/icon/logo.svg'
-import { MenuIcon } from '../../assets/icon/menu-mobile'
 
 interface MenuItem {
   label: string
@@ -20,40 +18,29 @@ export const NavbarDesktop: React.FC<NavbarDesktopProps> = ({
   redesItems,
   data,
 }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const menuRef = useRef<HTMLDivElement | null>(null)
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
-
-  const closeMenu = () => {
-    setIsMenuOpen(false)
-  }
-
-  useEffect(() => {
-    const handleOutsideClick = (e: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains?.(e.target as Node)) {
-        closeMenu()
-      }
-    }
-
-    document.addEventListener('click', handleOutsideClick)
-
-    return () => {
-      document.removeEventListener('click', handleOutsideClick)
-    }
-  }, [])
-
   return (
-    <div className="hidden md:sticky md:flex items-center justify-around bg-black h-[100px]">
-      <div className="cursor-pointer" onClick={toggleMenu}>
-        <MenuIcon onClick={toggleMenu} />
+    <div className="hidden md:sticky md:flex md:flex-row md:items-center md:justify-evenly bg-black h-[100px]">
+      <div className="flex">
+        <img
+          className="w-[80px] h-[80px]"
+          src={logoDesktop}
+          alt="Logo Desktop"
+        />
       </div>
 
-      <img className="w-[80px] h-[80px]" src={logoDesktop} alt="Logo Desktop" />
+      <div>
+        <ul className="flex flex-row items-center gap-4 p-4">
+          {data?.menuItems?.map((item, index) => (
+            <li key={index}>
+              <a className="text-yellow-400 hover:text-white" href={item.link}>
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-      <div className="flex">
+      <div className="flex gap-6">
         {redesItems.map((item, index) => (
           <a
             key={index}
@@ -70,24 +57,6 @@ export const NavbarDesktop: React.FC<NavbarDesktopProps> = ({
           </a>
         ))}
       </div>
-
-      {isMenuOpen && (
-        <div className="absolute top-18 left-60 right-[300] bg-black z-10 border rounded-md">
-          <ul className="flex flex-row items-center gap-4 p-4">
-            {data?.menuItems?.map((item, index) => (
-              <li key={index}>
-                <a
-                  className="text-yellow-400 hover:text-white"
-                  href={item.link}
-                  onClick={toggleMenu}
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </div>
   )
 }
