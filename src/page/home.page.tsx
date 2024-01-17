@@ -6,12 +6,11 @@ import { Footer } from '../components/footer/footer.component'
 import { Navbar } from '../components/navbar/navbar.components'
 import { ServicesSection } from '../components/services/section-services.component'
 
-import Banner from '../assets/banners/banner-1.png'
-import BannerTwo from '../assets/banners/banner-2.png'
-import BannerTree from '../assets/banners/banner-3.png'
+import Banner from '../assets/banners/banner-1.svg'
+import BannerTwo from '../assets/banners/banner-2.svg'
 
 export const HomePage = () => {
-  const images = [Banner, BannerTwo, BannerTree]
+  const images = [Banner, BannerTwo]
   const services = [
     {
       name: 'Sites',
