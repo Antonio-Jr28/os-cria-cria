@@ -9,10 +9,6 @@ const firebaseConfig = {
   apiKey: 'AIzaSyAnlZBZVBCGFPeEvDnP4eZkt4XVR-0LSx8',
   authDomain: 'os-cria-cria.firebaseapp.com',
   projectId: 'os-cria-cria',
-  storageBucket: 'os-cria-cria.appspot.com',
-  messagingSenderId: '813605485977',
-  appId: '1:813605485977:web:9eebddfc1907e45a096708',
-  measurementId: 'G-X156LTCC3G',
 }
 
 firebase.initializeApp(firebaseConfig)
@@ -51,6 +47,7 @@ export const ContactUs: React.FC = () => {
     try {
       await addDoc(collection(db, 'users'), form)
       console.log('Dados enviados com sucesso!')
+      alert('Dados enviados com sucesso!')
       clearForm()
     } catch (error) {
       console.error('Erro ao enviar dados para o Firestore:', error)
