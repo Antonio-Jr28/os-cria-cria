@@ -14,7 +14,8 @@
     "firebase": "10.7.1",
     "flexboxgrid2": "7.2.1",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-router-dom": "6.21.2"
   },
   "devDependencies": {
     "@types/node": "20.10.3",
@@ -31,7 +32,7 @@
     "prettier": "3.1.1",
     "tailwindcss": "3.3.5",
     "typescript": "5.2.2",
-    "vite": "^5.0.11",
+    "vite": "5.0.11",
     "vite-plugin-windicss": "1.9.2",
     "windicss": "3.5.6"
   },
