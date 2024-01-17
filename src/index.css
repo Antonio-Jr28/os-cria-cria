@@ -32,7 +32,7 @@ html {
 }
 @media only screen and (min-width: 768px) {
   .background-about-us-desktop {
-    background-image: url('./assets/backgrounds/quem-somos.svg');
+    background-image: url('./assets/backgrounds/novo-fundo.svg');
     background-size: cover;
     background-position: center;
   }
