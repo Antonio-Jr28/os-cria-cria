@@ -32,7 +32,10 @@ export const NavbarDesktop: React.FC<NavbarDesktopProps> = ({
         <ul className="flex flex-row items-center gap-4 p-4">
           {data?.menuItems?.map((item, index) => (
             <li key={index}>
-              <a className="text-yellow-400 hover:text-white" href={item.link}>
+              <a
+                className="text-yellow-400 hover:text-white text-2xl"
+                href={item.link}
+              >
                 {item.label}
               </a>
             </li>
