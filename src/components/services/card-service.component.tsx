@@ -1,30 +1,30 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 interface CardServiceProps {
   service: {
     name: string
     description: string
   }
+  onCardClick: () => void
+  isOpen: boolean
 }
 
-export const CardService: React.FC<CardServiceProps> = ({ service }) => {
-  const [showDescription, setShowDescription] = useState(false)
-
-  const handleCardClick = () => {
-    setShowDescription(!showDescription)
-  }
-
+const CardService: React.FC<CardServiceProps> = ({
+  service,
+  onCardClick,
+  isOpen,
+}) => {
   return (
     <div
-      className={`border border-yellow-600 items-center justify-center rounded-lg w-[250px] md:w-[400px] mt-3 ${
-        showDescription ? 'bg-trasnparet' : ''
+      className={`border border-yellow-600 hover:bg-violet-500 cursor-pointer items-center justify-center rounded-lg w-[250px] md:w-[400px] mt-3 ${
+        isOpen ? 'bg-transparent' : ''
       }`}
-      onClick={handleCardClick}
+      onClick={onCardClick}
     >
       <h1 className="text-3xl text-center text-white p-2 md:p-5">
         {service?.name}
       </h1>
-      {showDescription && (
+      {isOpen && (
         <p className="text-lg text-center text-white p-2 md:p-5">
           {service?.description}
         </p>
@@ -32,3 +32,5 @@ export const CardService: React.FC<CardServiceProps> = ({ service }) => {
     </div>
   )
 }
+
+export default CardService
