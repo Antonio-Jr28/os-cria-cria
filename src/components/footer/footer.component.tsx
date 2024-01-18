@@ -25,7 +25,7 @@ export const Footer: React.FC<FooterProps> = ({ services, medias }) => {
           </p>
           <p className="text-black text-lg mt-4">
             <i className="fas fa-envelope mr-4 text-black"></i>
-            oscria.cria21@gmail.com
+            oscria@oscriacria.com
           </p>
           <p className="text-black text-lg mt-4">
             <i className="fas fa-map-marker-alt mr-4 text-black"></i>
