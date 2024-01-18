@@ -43,8 +43,8 @@ export const AboutUs = () => {
         <h1 className="text-bombing text-6xl md:text-8xl mt-5 text-white">
           {aboutUsStrings.brand}
         </h1>
-        <div className="w-[400px]">
-          <p className="text-white text-center text-lg font-bold ">
+        <div className="w-[400px] pl-8 pr-8 md:pl-0 md:pr-0">
+          <p className="text-white text-justify text-lg font-bold ">
             {aboutUsStrings.description}
           </p>
         </div>
