@@ -9,10 +9,6 @@ const firebaseConfig = {
   apiKey: 'AIzaSyBLbLimmcn0lfyn0tNlK-yM8mBvwaP1Ifs',
   authDomain: 'os-cria-cria-10e5c.firebaseapp.com',
   projectId: 'os-cria-cria-10e5c',
-  storageBucket: 'os-cria-cria-10e5c.appspot.com',
-  messagingSenderId: '427687269581',
-  appId: '1:427687269581:web:47e43eb4321425001e8584',
-  measurementId: 'G-ELB4DHD1SV',
 }
 
 firebase.initializeApp(firebaseConfig)
@@ -50,8 +46,8 @@ export const ContactUs: React.FC = () => {
 
     try {
       await addDoc(collection(db, 'users'), form)
-      console.log('Dados enviados com sucesso!')
-      alert('Dados enviados com sucesso!')
+      console.log('Mensagem enviados com sucesso!')
+      alert('Mensagem enviados com sucesso!')
       clearForm()
     } catch (error) {
       console.error('Erro ao enviar dados para o Firestore:', error)
@@ -68,7 +64,7 @@ export const ContactUs: React.FC = () => {
       <div className="flex flex-col items-center md:flex-row md:justify-evenly mt-8 pb-10">
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col md:pl-10 border-2 border-white rounded-2xl bg-opacity-100 p-5"
+          className="flex flex-col border-2 border-white rounded-2xl bg-opacity-100 p-5"
         >
           <p className="text-white text-lg md:text-2xl">Nós chame!</p>
           <label htmlFor="name" className="mt-4 text-white">
@@ -114,9 +110,9 @@ export const ContactUs: React.FC = () => {
         </form>
 
         <div>
-          <h1 className="text-white text-center text-2xl md:text-[50px] leading-none mt-5">
+          <h1 className="text-white text-center text-4xl md:text-[50px] leading-none mt-7">
             {contactUsStrings.contactUs.suffix}
-            <h1 className="text-yellow-600 text-center text-2xl md:mt-4 md:text-[50px]">
+            <h1 className="text-yellow-600 text-center text-4xl md:mt-4 md:text-[50px]">
               {contactUsStrings.contactUs.prefix}
             </h1>
           </h1>
