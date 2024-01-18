@@ -50,8 +50,8 @@ export const Footer: React.FC<FooterProps> = ({ services, medias }) => {
 
           <ul className="mt-8">
             {medias.map((rede, index) => (
-              <li>
-                <a target="_blank" href={rede.link} key={index}>
+              <li key={index}>
+                <a target="_blank" href={rede.link}>
                   {rede.name}
                 </a>
               </li>

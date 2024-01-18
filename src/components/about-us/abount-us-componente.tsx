@@ -12,7 +12,7 @@ export const AboutUs = () => {
         </h1>
         <div className="flex flex-col md:flex-row items-center pl-5">
           <img
-            className="w-[200px] h-[200px]"
+            className="w-[250px] h-[250px]"
             src={Isabelly}
             alt="Foto da coceo da empresa"
           />
@@ -26,7 +26,7 @@ export const AboutUs = () => {
 
         <div className="flex flex-col md:flex-row-reverse pl-5 items-center">
           <img
-            className="w-[200px] h-[200px]"
+            className="w-[250px] h-[250px]"
             src={Antonio}
             alt="Foto da coceo da empresa"
           />
