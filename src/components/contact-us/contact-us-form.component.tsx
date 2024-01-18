@@ -110,11 +110,11 @@ export const ContactUs: React.FC = () => {
         </form>
 
         <div>
-          <h1 className="text-white text-center text-4xl md:text-[50px] leading-none mt-7">
+          <h1 className="text-white text-center text-4xl md:text-[68px] leading-none mt-7">
             {contactUsStrings.contactUs.suffix}
-            <h1 className="text-yellow-600 text-center text-4xl md:mt-4 md:text-[50px]">
-              {contactUsStrings.contactUs.prefix}
-            </h1>
+          </h1>
+          <h1 className="text-yellow-600 text-center text-4xl md:mt-4 md:text-[50px]">
+            {contactUsStrings.contactUs.prefix}
           </h1>
           <p className="text-white text-sm md:text-2xl mt-8">
             <i className="fas fa-phone mr-4 text-yellow-400"></i>

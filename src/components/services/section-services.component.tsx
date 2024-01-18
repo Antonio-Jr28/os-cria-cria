@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import CardService from './card-service.component'
+import CardService from '../services/card-service.component'
 
 interface ServicesSectionProps {
   services: {
