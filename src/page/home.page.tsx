@@ -8,9 +8,10 @@ import { ServicesSection } from '../components/services/section-services.compone
 
 import Banner from '../assets/banners/banner-1.svg'
 import BannerTwo from '../assets/banners/banner-2.svg'
+import BannerTree from '../assets/banners/banner-3.svg'
 
 export const HomePage = () => {
-  const images = [Banner, BannerTwo]
+  const images = [Banner, BannerTwo, BannerTree]
   const services = [
     {
       name: 'Sites',

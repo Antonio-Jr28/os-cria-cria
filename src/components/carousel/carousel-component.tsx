@@ -28,7 +28,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images }) => {
     <div>
       {images.map((image, index) => (
         <img
-          key={image}
+          key={index}
           src={image}
           alt={`Imagem ${index + 1}`}
           style={{
