@@ -20,7 +20,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       nextImage()
-    }, 5000)
+    }, 8000)
     return () => clearTimeout(timer)
   }, [currentImageIndex])
 

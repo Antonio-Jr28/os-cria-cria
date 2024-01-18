@@ -9,9 +9,10 @@ import { ServicesSection } from '../components/services/section-services.compone
 import Banner from '../assets/banners/banner-1.svg'
 import BannerTwo from '../assets/banners/banner-2.svg'
 import BannerTree from '../assets/banners/banner-3.svg'
+import Bannerfour from '../assets/banners/banner-4.svg'
 
 export const HomePage = () => {
-  const images = [Banner, BannerTwo, BannerTree]
+  const images = [Banner, Bannerfour, BannerTwo, BannerTree]
   const services = [
     {
       name: 'Sites',
@@ -44,7 +45,14 @@ export const HomePage = () => {
         'Transforme sua presença online com designs irresistíveis! 🚀 Seja para um site profissional, blog envolvente ou plataforma interativa, eu estou aqui para realizar suas ideias! 💻✨',
     },
   ]
-  const socialMedia = ['Instagram', 'Facebook', 'Github']
+  const socialMedia = [
+    { name: 'Instagram', link: 'https://www.instagram.com/oscria.cria/' },
+    {
+      name: 'Facebook',
+      link: 'https://www.facebook.com/profile.php?id=61555736121745',
+    },
+    { name: 'Whatsapp', link: 'https://w.app/ePnYhg' },
+  ]
 
   return (
     <>

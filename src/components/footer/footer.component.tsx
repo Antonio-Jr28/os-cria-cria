@@ -4,7 +4,7 @@ import Logo from '../../assets/icon/logo-mobile.svg'
 
 interface FooterProps {
   services: { name: string; description: string }[]
-  medias: string[]
+  medias: { name: string; link: string }[]
 }
 
 export const Footer: React.FC<FooterProps> = ({ services, medias }) => {
@@ -46,11 +46,15 @@ export const Footer: React.FC<FooterProps> = ({ services, medias }) => {
         </div>
 
         <div>
-          <h2 className=" text-4xl mt-8">Redes Sociais</h2>
+          <h2 className=" text-4xl mt-8">Social</h2>
 
           <ul className="mt-8">
             {medias.map((rede, index) => (
-              <li key={index}>{rede}</li>
+              <li>
+                <a target="_blank" href={rede.link} key={index}>
+                  {rede.name}
+                </a>
+              </li>
             ))}
           </ul>
           <img className="pl-[80px] md:pl-[0]" src={Logo} alt="logo" />
