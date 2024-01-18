@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "os-cria-cria"
-  }
+    "default": "os-cria-cria-10e5c",
+    "sim": "os-cria-cria-10e5c"
+  },
+  "targets": {},
+  "etags": {}
 }
