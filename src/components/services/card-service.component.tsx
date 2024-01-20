@@ -1,36 +1,96 @@
-import React from 'react'
+import { useState } from 'react'
 
-interface CardServiceProps {
-  service: {
-    name: string
-    description: string
-  }
-  onCardClick: () => void
-  isOpen: boolean
-}
+import tecno from '../../assets/icon/violet-technology.svg'
+import writing from '../../assets/icon/violet-writing.svg'
+import print from '../../assets/icon/violet-print.svg'
 
-const CardService: React.FC<CardServiceProps> = ({
-  service,
-  onCardClick,
-  isOpen,
-}) => {
+export const CardServices = () => {
+  const [showTecno, setShowTecno] = useState(false)
+  const [showSocialMedia, setShowSocialMedia] = useState(false)
+  const [showPrint, setShowPrint] = useState(false)
+
   return (
-    <div
-      className={`border border-yellow-600 hover:bg-violet-500 cursor-pointer items-center justify-center rounded-lg w-[250px] md:w-[400px] mt-3 ${
-        isOpen ? 'bg-transparent' : ''
-      }`}
-      onClick={onCardClick}
-    >
-      <h1 className="text-3xl text-center text-white p-2 md:p-5">
-        {service?.name}
-      </h1>
-      {isOpen && (
-        <p className="text-lg text-center text-white p-2 md:p-5">
-          {service?.description}
-        </p>
-      )}
+    <div className="flex flex-col md:flex-row items-center justify-evenly">
+      <div
+        className="flex flex-col items-center border-2 backFooterColor border-white mt-10 rounded-2xl cursor-pointer w-[300px]"
+        onClick={() => setShowTecno(!showTecno)}
+      >
+        <img src={tecno} className="w-[250px] h-[250px]" />
+        {showTecno && (
+          <>
+            <h2 className="text-white text-center text-3xl">Tecnologia</h2>
+            <ul className="flex flex-col text-white text-center mt-8 mb-5 items-center">
+              <li className="border-2 border-white w-[200px] mt-3">Website</li>
+              <li className="border-2 border-white w-[200px] mt-3">
+                Aplicativo Web
+              </li>
+              <li className="border-2 border-white w-[200px] mt-3">
+                Material digital
+              </li>
+            </ul>
+            <a
+              className="border text-white bg-violet-500 rounded-2xl w-[150px] text-center mb-4"
+              href="#contact"
+            >
+              Fale Conosco
+            </a>
+          </>
+        )}
+      </div>
+
+      <div
+        className="flex flex-col items-center border-2 backFooterColor border-white mt-10 rounded-2xl cursor-pointer w-[300px]"
+        onClick={() => setShowSocialMedia(!showSocialMedia)}
+      >
+        <img src={writing} className="w-[250px] h-[250px]" />
+        {showSocialMedia && (
+          <>
+            <h2 className="text-white text-center text-3xl">Social Media</h2>
+            <ul className="flex flex-col text-white text-center mt-8 mb-5 items-center">
+              <li className="border-2 border-white w-[200px] mt-3">
+                Biografias
+              </li>
+              <li className="border-2 border-white w-[200px] mt-3">
+                Copywriting
+              </li>
+              <li className="border-2 border-white w-[200px] mt-3">Releases</li>
+            </ul>
+            <a
+              className="border text-white bg-violet-500 rounded-2xl w-[150px] text-center mb-4"
+              href="#contact"
+            >
+              Fale Conosco
+            </a>
+          </>
+        )}
+      </div>
+
+      <div
+        className="flex flex-col items-center border-2 backFooterColor border-white mt-10 rounded-2xl cursor-pointer w-[300px]"
+        onClick={() => setShowPrint(!showPrint)}
+      >
+        <img src={print} className="w-[250px] h-[250px]" />
+        {showPrint && (
+          <>
+            <h2 className="text-white text-center text-3xl">
+              Material Impressos
+            </h2>
+            <ul className="flex flex-col text-white text-center mt-8 mb-5 items-center">
+              <li className="border-2 border-white w-[200px] mt-3">Banners</li>
+              <li className="border-2 border-white w-[200px] mt-3">Faixas</li>
+              <li className="border-2 border-white w-[200px] mt-3">
+                Panfletos
+              </li>
+            </ul>
+            <a
+              className="border text-white bg-violet-500 rounded-2xl w-[150px] text-center mb-4"
+              href="#contact"
+            >
+              Fale Conosco
+            </a>
+          </>
+        )}
+      </div>
     </div>
   )
 }
-
-export default CardService

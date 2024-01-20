@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import CardService from '../services/card-service.component'
+import React from 'react'
+import { CardServices } from './card-service.component'
 
 interface ServicesSectionProps {
   services: {
@@ -8,34 +8,14 @@ interface ServicesSectionProps {
   }[]
 }
 
-export const ServicesSection: React.FC<ServicesSectionProps> = ({
-  services,
-}) => {
-  const [openService, setOpenService] = useState<string | null>(null)
-  const [showDescription, setShowDescription] = useState(false)
-
-  const handleCardClick = (serviceName: string) => {
-    setShowDescription(!showDescription)
-    setOpenService((prevService) =>
-      prevService === serviceName ? null : serviceName,
-    )
-  }
-
+export const ServicesSection: React.FC<ServicesSectionProps> = ({}) => {
   return (
     <div className="flex flex-col">
-      <h1 className="text-bombing text-6xl md:text-8xl text-white md:text-start md:pl-28 md:mt-28 mt-11 text-center ">
+      <h1 className="text-bombing text-6xl md:text-8xl text-white md:text-start md:pl-28 md:mt-28 mt-20 text-center ">
         Serviços
       </h1>
-      <div className="flex flex-wrap justify-evenly items-center mt-11">
-        {services?.map((service, index) => (
-          <CardService
-            key={(service.name, index)}
-            service={service}
-            onCardClick={() => handleCardClick(service.name)}
-            isOpen={openService === service.name}
-          />
-        ))}
-      </div>
+
+      <CardServices />
     </div>
   )
 }

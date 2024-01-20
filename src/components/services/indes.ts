@@ -1,1 +1,1 @@
-export * from './card-service.component'
+export * from './section-services.component'
