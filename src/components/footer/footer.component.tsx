@@ -10,14 +10,15 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({ services, medias }) => {
   return (
     <>
-      <div className="flex flex-col pl-4 pr-4 md:flex-row md:justify-around text-center backFooterColor h-[870px] md:h-[320px] w-[1000px] rounded-t-[50px] mt-12">
+      <div className="flex flex-col pl-4 pr-4 md:flex-row md:justify-around text-center backFooterColor h-[870px] md:h-[340px] w-[1000px] rounded-t-[50px] mt-12">
         <div>
           <h2 className="text-bombing text-5xl text-center mt-8">
             Os Cria Cria
           </h2>
-          <p className="w-auto md:w-[350px] mt-1">
-            Empresa criada para o desenvolvimento e crescimento de pequenas
-            empresas para grandes negócios.
+          <p className="w-auto md:text-justify md:w-[350px] mt-1">
+            Potencializamos seu negócio através de comunicação aprimorada e
+            criação de websites, incorporando tecnologia para impulsionar sua
+            presença online.
           </p>
           <p className="text-black text-lg mt-8">
             <i className="fas fa-phone mr-4 text-black"></i>

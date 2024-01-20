@@ -66,7 +66,9 @@ export const ContactUs: React.FC = () => {
           onSubmit={handleSubmit}
           className="flex flex-col border-2 border-white rounded-2xl bg-opacity-100 p-5"
         >
-          <p className="text-white text-lg md:text-2xl">Nós chame!</p>
+          <p className="text-white text-lg md:text-2xl">
+            Mande a sua dúvida...
+          </p>
           <label htmlFor="name" className="mt-4 text-white">
             {contactUsStrings.form.name}
           </label>
@@ -110,10 +112,10 @@ export const ContactUs: React.FC = () => {
         </form>
 
         <div>
-          <h1 className="text-white text-center text-4xl md:text-[68px] leading-none mt-7">
+          <h1 className="text-white text-left text-4xl md:text-[60px] leading-none mt-7">
             {contactUsStrings.contactUs.suffix}
           </h1>
-          <h1 className="text-yellow-600 text-center text-4xl md:mt-4 md:text-[50px]">
+          <h1 className="text-yellow-600 text-left text-4xl md:mt-4 md:text-[68px]">
             {contactUsStrings.contactUs.prefix}
           </h1>
           <p className="text-white text-sm md:text-2xl mt-8">

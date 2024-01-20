@@ -7,8 +7,8 @@ export const contactUsStrings = {
     buttonSend: 'Enviar',
   },
   contactUs: {
-    suffix: 'Transformamos ',
-    prefix: 'sonhos em realidade',
+    suffix: 'VOCÊ PENSA ',
+    prefix: 'OS CRIA, CRIA',
     phone: '11 - 95427-7459',
     email: 'oscria@oscriacria.com',
     andress: 'Rua: Montanhas, 61 Itaquera/SP',
