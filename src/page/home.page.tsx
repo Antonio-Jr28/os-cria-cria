@@ -9,6 +9,7 @@ import { ServicesSection } from '../components/services/section-services.compone
 import Banner from '../assets/banners/banner-1.svg'
 import BannerTwo from '../assets/banners/banner-2.svg'
 import Bannerfour from '../assets/banners/banner-4.svg'
+import { GradientDivider } from '../components/gradient-divider/gradient-divider.component'
 
 export const HomePage = () => {
   const images = [Banner, Bannerfour, BannerTwo]
@@ -66,7 +67,10 @@ export const HomePage = () => {
         id="about"
         className="background-about-us background-about-us-desktop"
       >
+        <GradientDivider height="5px" colorStart="violet" colorEnd="violet" />
+
         <AboutUs />
+        <GradientDivider height="5px" colorStart="black" colorEnd="violet" />
       </section>
 
       <section
@@ -75,11 +79,13 @@ export const HomePage = () => {
       >
         <ServicesSection services={services} />
         <Divider />
+        <GradientDivider height="5px" colorStart="black" colorEnd="violet" />
       </section>
 
       <section className="background-image-form" id="contact">
         <ContactUs />
         <Divider />
+        <GradientDivider height="5px" colorStart="black" colorEnd="violet" />
       </section>
 
       <section className="flex justify-center items-end background-image-form ">
