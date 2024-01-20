@@ -3,7 +3,7 @@ import React from 'react'
 import Logo from '../../assets/icon/logo-mobile.svg'
 
 interface FooterProps {
-  services: { name: string; description: string }[]
+  services: { name: string }[]
   medias: { name: string; link: string }[]
 }
 

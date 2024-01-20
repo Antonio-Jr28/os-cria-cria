@@ -8,16 +8,14 @@ import { ServicesSection } from '../components/services/section-services.compone
 
 import Banner from '../assets/banners/banner-1.svg'
 import BannerTwo from '../assets/banners/banner-2.svg'
-import Bannerfour from '../assets/banners/banner-4.svg'
+import Bannertree from '../assets/banners/banner-3.svg'
 import { GradientDivider } from '../components/gradient-divider/gradient-divider.component'
 
 export const HomePage = () => {
-  const images = [Banner, Bannerfour, BannerTwo]
+  const images = [Banner, BannerTwo, Bannertree]
   const services = [
     {
       name: 'Sites',
-      description:
-        'Transforme sua presença online com designs irresistíveis! 🚀 Seja para um site profissional, blog envolvente ou plataforma interativa, eu estou aqui para realizar suas ideias! 💻✨',
     },
     {
       name: 'Banner',
@@ -56,42 +54,25 @@ export const HomePage = () => {
 
   return (
     <>
-      <section className="bg-black">
-        <Navbar redesItems={[]} data={[]} />
-      </section>
-      <section>
+      <Navbar redesItems={[]} data={[]} />
+      <section className="flex flex-col justify-evenly bg-gray-900">
         <Carousel images={images} />
-      </section>
 
-      <section
-        id="about"
-        className="background-about-us background-about-us-desktop"
-      >
         <GradientDivider height="5px" colorStart="violet" colorEnd="violet" />
 
         <AboutUs />
-        <GradientDivider height="5px" colorStart="black" colorEnd="violet" />
-      </section>
 
-      <section
-        className="background-image background-image-desktop"
-        id="services"
-      >
         <ServicesSection services={services} />
-        <Divider />
-        <GradientDivider height="5px" colorStart="black" colorEnd="violet" />
-      </section>
 
-      <section className="background-image-form" id="contact">
+        <Divider />
+
         <ContactUs />
-        <Divider />
-        <GradientDivider height="5px" colorStart="black" colorEnd="violet" />
-      </section>
 
-      <section className="flex justify-center items-end background-image-form ">
         <Divider />
-        <Footer medias={socialMedia} services={services} />
       </section>
+      <div className="flex justify-center items-end bg-black">
+        <Footer medias={socialMedia} services={services} />
+      </div>
     </>
   )
 }

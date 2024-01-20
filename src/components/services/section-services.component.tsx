@@ -4,7 +4,6 @@ import { CardServices } from './card-service.component'
 interface ServicesSectionProps {
   services: {
     name: string
-    description: string
   }[]
 }
 
