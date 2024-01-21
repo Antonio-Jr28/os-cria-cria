@@ -55,7 +55,7 @@ export const HomePage = () => {
   return (
     <>
       <Navbar redesItems={[]} data={[]} />
-      <section className="flex flex-col justify-evenly bg-gray-900">
+      <section className="flex flex-col justify-evenly bg-gray-800">
         <Carousel images={images} />
 
         <GradientDivider height="5px" colorStart="violet" colorEnd="violet" />
@@ -70,7 +70,7 @@ export const HomePage = () => {
 
         <Divider />
       </section>
-      <div className="flex justify-center items-end bg-black">
+      <div className="flex justify-center items-end bg-gray-900">
         <Footer medias={socialMedia} services={services} />
       </div>
     </>
