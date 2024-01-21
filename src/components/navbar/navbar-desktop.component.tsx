@@ -19,7 +19,7 @@ export const NavbarDesktop: React.FC<NavbarDesktopProps> = ({
   data,
 }) => {
   return (
-    <div className="hidden md:sticky md:flex md:flex-row md:items-center md:justify-evenly bg-black h-[100px]">
+    <div className="hidden md:sticky md:flex md:flex-row md:items-center md:justify-evenly bg-gray-900 h-[100px]">
       <div className="flex">
         <img
           className="w-[80px] h-[80px]"
