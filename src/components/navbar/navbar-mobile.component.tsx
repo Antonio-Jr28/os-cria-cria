@@ -46,7 +46,7 @@ export const NavbarMobile: React.FC<NavbarMobileProps> = ({ menuItems }) => {
       </div>
 
       {isMenuOpen && (
-        <div className="absolute top-20 left-7 right-7 bg-black z-10 border rounded-md shadow-md">
+        <div className="absolute top-20 left-7 right-7 bg-gray-900 z-10 border rounded-md shadow-md">
           <ul className="flex flex-col items-center text-gray-400 md:flex-row md:items-center gap-4 p-4">
             {menuItems.map((item, index) => (
               <li key={index}>
