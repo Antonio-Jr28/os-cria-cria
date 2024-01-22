@@ -16,10 +16,10 @@ export const CardServices = () => {
         onClick={() => setShowTecno(!showTecno)}
       >
         <img src={tecno} className="w-[250px] h-[250px]" />
+        <h2 className="text-white text-center text-3xl mb-5">Tecnologia</h2>
         {showTecno && (
           <>
-            <h2 className="text-white text-center text-3xl">Tecnologia</h2>
-            <ul className="flex flex-col text-white text-center mt-8 mb-5 items-center">
+            <ul className="flex flex-col text-white text-center mt-4 mb-5 items-center">
               <li className="border-2 border-white w-[200px] mt-3">Website</li>
               <li className="border-2 border-white w-[200px] mt-3">
                 Aplicativo Web
@@ -43,10 +43,10 @@ export const CardServices = () => {
         onClick={() => setShowSocialMedia(!showSocialMedia)}
       >
         <img src={writing} className="w-[250px] h-[250px]" />
+        <h2 className="text-white text-center text-3xl mb-5">Social Media</h2>
         {showSocialMedia && (
           <>
-            <h2 className="text-white text-center text-3xl">Social Media</h2>
-            <ul className="flex flex-col text-white text-center mt-8 mb-5 items-center">
+            <ul className="flex flex-col text-white text-center mt-4 mb-5 items-center">
               <li className="border-2 border-white w-[200px] mt-3">
                 Biografias
               </li>
@@ -70,12 +70,12 @@ export const CardServices = () => {
         onClick={() => setShowPrint(!showPrint)}
       >
         <img src={print} className="w-[250px] h-[250px]" />
+        <h2 className="text-white text-center text-3xl mb-5">
+          Material Impressos
+        </h2>
         {showPrint && (
           <>
-            <h2 className="text-white text-center text-3xl">
-              Material Impressos
-            </h2>
-            <ul className="flex flex-col text-white text-center mt-8 mb-5 items-center">
+            <ul className="flex flex-col text-white text-center mt-4 mb-5 items-center">
               <li className="border-2 border-white w-[200px] mt-3">Banners</li>
               <li className="border-2 border-white w-[200px] mt-3">Faixas</li>
               <li className="border-2 border-white w-[200px] mt-3">
