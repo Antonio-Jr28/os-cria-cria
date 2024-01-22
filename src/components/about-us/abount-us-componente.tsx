@@ -6,11 +6,12 @@ import Antonio from '../../assets/img/antonio-about.svg'
 export const AboutUs = () => {
   return (
     <div className="flex flex-col md:flex-row items-center md:justify-evenly">
-      <div className="flex flex-col items-center w-[350px] md:w-[600px]">
+      <div className="flex flex-col items-center w-[350px] md:w-[600px] md:pl-20">
+        <Divider />
         <h1 className="text-bombing text-6xl md:text-8xl mt-5 text-white">
           {aboutUsStrings.title}
         </h1>
-        <div className="flex flex-col md:flex-row items-center pl-10">
+        <div className="flex flex-col md:flex-row items-center pl-10 gap-5">
           <img
             className="w-[250px] h-[250px]"
             src={Isabelly}
