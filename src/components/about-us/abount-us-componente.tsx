@@ -71,7 +71,7 @@ export const AboutUs = () => {
 
       <div className="h-[80px]" />
 
-      <div className="flex flex-col items-center w-[350px] md:w-[400px] pt-36 pr-10 aboutCria">
+      <div className="flex flex-col items-center w-[350px] md:w-[400px] pt-36 md:pr-20 aboutCria">
         <h1 className="text-bombing text-6xl md:text-8xl mt-5 text-white">
           {aboutUsStrings.brand}
         </h1>
