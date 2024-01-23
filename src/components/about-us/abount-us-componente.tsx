@@ -3,29 +3,44 @@ import { useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-import { Divider } from '../ divider/divider.component'
 import { aboutUsStrings } from './about-us.strings'
 import Isabelly from '../../assets/img/isabelly-about.svg'
 import Antonio from '../../assets/img/antonio-about.svg'
+import { Divider } from '../ divider/divider.component'
 
 export const AboutUs = () => {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger)
-    gsap.to('.aboutItems, .aboutCria', {
-      x: 0,
-      opacity: 1,
-      scrollTrigger: {
-        trigger: '.aboutSection',
-        // markers: true,
-        start: 'top 520px',
-        end: 'bottom 615px',
-        scrub: true,
-      },
-    })
+
+    const updateScrollTrigger = () => {
+      const start = window.innerWidth < 768 ? 'top 0px' : 'top 520px'
+      const end = window.innerWidth < 768 ? 'bottom 2000px' : 'bottom 615px'
+
+      gsap.to('.aboutItems, .aboutCria', {
+        x: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: '.aboutSection',
+          markers: true,
+          start: start,
+          end: end,
+          scrub: true,
+          invalidateOnRefresh: true,
+        },
+      })
+    }
+
+    updateScrollTrigger()
+    window.addEventListener('resize', updateScrollTrigger)
+
+    return () => {
+      window.removeEventListener('resize', updateScrollTrigger)
+      ScrollTrigger.clearMatchMedia()
+    }
   }, [])
   return (
-    <section className="flex flex-col md:flex-row items-center md:justify-evenly md:aboutSection">
-      <div className="flex flex-col items-center w-[350px] md:w-[600px] md:pl-20 md:aboutItems">
+    <section className="flex flex-col md:flex-row items-center md:justify-evenly aboutSection">
+      <div className="flex flex-col items-center w-[350px] md:w-[600px] md:pl-20 aboutItems">
         <Divider />
         <h1 className="text-bombing text-6xl md:text-8xl mt-5 text-white">
           {aboutUsStrings.title}
@@ -57,7 +72,7 @@ export const AboutUs = () => {
 
       <div className="h-[80px]" />
 
-      <div className="flex flex-col items-center w-[350px] md:w-[400px] pt-36 pr-10 md:aboutCria">
+      <div className="flex flex-col items-center w-[350px] md:w-[400px] pt-36 pr-10 aboutCria">
         <h1 className="text-bombing text-6xl md:text-8xl mt-5 text-white">
           {aboutUsStrings.brand}
         </h1>
