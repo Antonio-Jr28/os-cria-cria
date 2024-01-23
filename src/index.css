@@ -9,41 +9,6 @@ html {
   overflow-x: hidden; /* Evitar barra de rolagem horizontal */
 }
 
-.background-image {
-  background-image: url('./assets/backgrounds/background-service-mobile.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-@media only screen and (min-width: 768px) {
-  .background-image-desktop {
-    background-image: url('./assets/backgrounds/background-service.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
-
-.background-about-us {
-  background-image: url('./assets/backgrounds/background-about-us-mobile.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-@media only screen and (min-width: 768px) {
-  .background-about-us-desktop {
-    background-image: url('./assets/backgrounds/novo-fundo.svg');
-    background-size: cover;
-    background-position: center;
-  }
-}
-
-.background-image-form {
-  background-image: url('./assets/backgrounds/background.svg');
-  background-size: cover;
-  background-position: center;
-}
-
 .icon-container:hover .social-icon {
   width: 40px;
   height: 40px;
