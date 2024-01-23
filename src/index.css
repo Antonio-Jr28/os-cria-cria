@@ -93,3 +93,16 @@ html {
 .backFooterColor {
   background-color: #ffbd59;
 }
+
+.aboutSection {
+}
+
+.aboutItems {
+  transform: translateX(-700px);
+  opacity: 0;
+}
+
+.aboutCria {
+  transform: translateX(800px);
+  opacity: 0;
+}
