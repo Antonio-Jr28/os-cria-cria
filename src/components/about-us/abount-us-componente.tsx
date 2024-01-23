@@ -21,7 +21,6 @@ export const AboutUs = () => {
         opacity: 1,
         scrollTrigger: {
           trigger: '.aboutSection',
-          markers: true,
           start: start,
           end: end,
           scrub: true,
