@@ -40,7 +40,6 @@ export const AboutUs = () => {
   return (
     <section className="flex flex-col md:flex-row items-center md:justify-evenly aboutSection">
       <div className="flex flex-col items-center w-[350px] md:w-[600px] md:pl-20 aboutItems">
-        <Divider />
         <h1 className="text-bombing text-6xl md:text-8xl mt-5 text-white">
           {aboutUsStrings.title}
         </h1>
