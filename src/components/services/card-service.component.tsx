@@ -65,11 +65,11 @@ export const CardServices = () => {
   return (
     <section className="serviceSection">
       <div
-        className="flex flex-col md:flex-row items-center justify-evenly service"
+        className="flex flex-col md:flex-row items-center justify-evenly md:service"
         ref={el}
       >
         <div
-          className="flex flex-col items-center border-2 backFooterColor border-white mt-10 rounded-2xl cursor-pointer w-[300px] models-item"
+          className="flex flex-col items-center border-2 backFooterColor border-white mt-10 rounded-2xl cursor-pointer w-[300px] md:models-item"
           id="model-1"
           onClick={() => setShowTecno(!showTecno)}
         >

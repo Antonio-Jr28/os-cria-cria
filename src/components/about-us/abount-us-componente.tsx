@@ -24,8 +24,8 @@ export const AboutUs = () => {
     })
   }, [])
   return (
-    <section className="flex flex-col md:flex-row items-center md:justify-evenly aboutSection">
-      <div className="flex flex-col items-center w-[350px] md:w-[600px] md:pl-20 aboutItems">
+    <section className="flex flex-col md:flex-row items-center md:justify-evenly md:aboutSection">
+      <div className="flex flex-col items-center w-[350px] md:w-[600px] md:pl-20 md:aboutItems">
         <Divider />
         <h1 className="text-bombing text-6xl md:text-8xl mt-5 text-white">
           {aboutUsStrings.title}
@@ -57,7 +57,7 @@ export const AboutUs = () => {
 
       <div className="h-[80px]" />
 
-      <div className="flex flex-col items-center w-[350px] md:w-[400px] pt-36 pr-10 aboutCria">
+      <div className="flex flex-col items-center w-[350px] md:w-[400px] pt-36 pr-10 md:aboutCria">
         <h1 className="text-bombing text-6xl md:text-8xl mt-5 text-white">
           {aboutUsStrings.brand}
         </h1>
