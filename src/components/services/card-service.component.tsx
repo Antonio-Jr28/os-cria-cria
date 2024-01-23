@@ -88,12 +88,6 @@ export const CardServices = () => {
                   Material digital
                 </li>
               </ul>
-              <a
-                className="border text-white bg-violet-500 rounded-2xl w-[150px] text-center mb-4"
-                href="#contact"
-              >
-                Fale Conosco
-              </a>
             </>
           )}
         </div>
@@ -118,12 +112,6 @@ export const CardServices = () => {
                   Releases
                 </li>
               </ul>
-              <a
-                className="border text-white bg-violet-500 rounded-2xl w-[150px] text-center mb-4"
-                href="#contact"
-              >
-                Fale Conosco
-              </a>
             </>
           )}
         </div>
@@ -148,12 +136,6 @@ export const CardServices = () => {
                   Panfletos
                 </li>
               </ul>
-              <a
-                className="border text-white bg-violet-500 rounded-2xl w-[150px] text-center mb-4"
-                href="#contact"
-              >
-                Fale Conosco
-              </a>
             </>
           )}
         </div>
