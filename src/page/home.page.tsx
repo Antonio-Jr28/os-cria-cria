@@ -60,14 +60,17 @@ export const HomePage = () => {
 
         <GradientDivider height="5px" colorStart="violet" colorEnd="violet" />
 
-        <AboutUs />
+        <section id="about">
+          <AboutUs />
+        </section>
 
-        <ServicesSection services={services} />
-
+        <section id="services">
+          <ServicesSection services={services} />
+        </section>
         <Divider />
-
-        <ContactUs />
-
+        <section id="contact">
+          <ContactUs />
+        </section>
         <Divider />
       </section>
       <div className="flex justify-center items-end bg-gray-900">
